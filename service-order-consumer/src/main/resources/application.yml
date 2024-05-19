@@ -1,0 +1,16 @@
+server:
+  port: 8085
+spring:
+  application:
+    name: service-order-consumer
+  kafka:
+    bootstrap-servers: localhost:9092
+    consumer:
+      auto-offset-reset: earliest
+      group-id: order-consumer-group
+    topic:
+      payment: payment_topic
+  datasource:
+    url: jdbc:postgresql://localhost:5432/db_orders
+    username: postgres
+    password: gustavo
